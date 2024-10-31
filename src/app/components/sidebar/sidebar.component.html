@@ -1,0 +1,8 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" [opened]="isDrawerOpened">
+    <app-calendar (dateChanged)="onDateChanged($event)"></app-calendar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-slots [selectedDate]="selectedDate"></app-slots>
+  </mat-drawer-content>
+</mat-drawer-container>

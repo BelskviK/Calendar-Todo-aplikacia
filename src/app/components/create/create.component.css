@@ -1,0 +1,12 @@
+.task-form-container {
+  z-index: 1000;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+mat-form-field {
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 16px;
+}

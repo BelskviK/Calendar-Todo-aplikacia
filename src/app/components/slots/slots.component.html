@@ -1,0 +1,23 @@
+<div>
+  <div class="container" cdkDropListGroup>
+    <ng-container *ngFor="let timeSlot of timeSlots">
+      <div class="example-container">
+        <p>{{ timeSlot.label }}</p>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="timeSlot.title"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <ng-container *ngFor="let item of timeSlot.title">
+            <div class="example-box" cdkDrag (click)="openEditTaskForm(item)">
+              {{ item.title }}
+              <!-- Display task title -->
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

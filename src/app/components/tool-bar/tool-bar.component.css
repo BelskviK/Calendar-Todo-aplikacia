@@ -1,0 +1,9 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  height: 10%;
+}
+.example-icon {
+  background-color: rgba(95, 175, 255, 0.484);
+}

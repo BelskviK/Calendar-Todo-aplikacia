@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="toggleDrawer()" aria-label="Toggle sidebar">
+    <mat-icon>menu</mat-icon>
+    <!-- You can change this icon based on the state if needed -->
+  </button>
+  <span> <h2>Calendar App</h2></span>
+  <span class="example-spacer"></span>
+  <button
+    mat-mini-fab
+    class="example-icon favorite-icon"
+    (click)="openAddTaskForm()"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>

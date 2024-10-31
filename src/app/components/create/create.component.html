@@ -1,0 +1,55 @@
+<div class="task-form-container">
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <!-- Title -->
+    <mat-form-field appearance="outline">
+      <mat-label>Task</mat-label>
+      <input matInput formControlName="title" placeholder="Enter task title" />
+      <mat-error *ngIf="taskForm.controls['title'].hasError('required')">
+        Title is required
+      </mat-error>
+      <mat-error *ngIf="taskForm.controls['title'].hasError('minlength')">
+        Minimum 3 characters required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="datePicker"
+        formControlName="date"
+        placeholder="Choose a date"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datePicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datePicker></mat-datepicker>
+      <mat-error *ngIf="taskForm.controls['date'].hasError('required')">
+        Date is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Start Time -->
+    <mat-form-field appearance="outline">
+      <mat-label>Start Time</mat-label>
+      <mat-select formControlName="startTime">
+        <mat-option *ngFor="let time of timeOptions" [value]="time">{{
+          time
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="taskForm.controls['startTime'].hasError('required')">
+        Start time is required
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Submit Button -->
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="taskForm.invalid"
+    >
+      Add Task
+    </button>
+  </form>
+</div>
