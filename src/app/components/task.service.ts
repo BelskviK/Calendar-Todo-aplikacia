@@ -9,19 +9,19 @@ import { Task } from '../../models/task.model';
 })
 export class TaskService {
   public tasksSource = new BehaviorSubject<Task[]>([
-    { id: 1, title: 'Groceries', date: '2024-09-05', start_time: '00:45' },
-    { id: 2, title: 'Meeting', date: '2024-09-01', start_time: '01:30' },
-    { id: 3, title: 'Wife', date: '2024-09-16', start_time: '02:15 AM' },
-    { id: 4, title: 'Kids', date: '2024-09-16', start_time: '02:45' },
-    { id: 5, title: 'Coding', date: '2024-09-16', start_time: '03:00' },
-    { id: 6, title: 'Coding', date: '2024-09-02', start_time: '04:15' },
-    { id: 7, title: 'Coding', date: '2024-09-03', start_time: '05:30' },
-    { id: 8, title: 'Coding', date: '2024-09-22', start_time: '06:00' },
-    { id: 9, title: 'Coding', date: '2024-09-20', start_time: '07:45' },
-    { id: 10, title: 'Vacation', date: '2024-09-20', start_time: '08:30' },
-    { id: 11, title: 'Couriering', date: '2024-09-10', start_time: '09:15' },
-    { id: 12, title: 'Couriering', date: '2024-09-13', start_time: '10:00' },
-    { id: 13, title: 'Planning', date: '2024-09-13', start_time: '11:30' },
+    { id: 1, title: 'Groceries', date: '2024-11-05', start_time: '00:45' },
+    { id: 2, title: 'Meeting', date: '2024-11-01', start_time: '01:30' },
+    { id: 3, title: 'Wife', date: '2024-12-16', start_time: '02:15 AM' },
+    { id: 4, title: 'Kids', date: '2024-11-16', start_time: '02:45' },
+    { id: 5, title: 'Coding', date: '2024-11-16', start_time: '03:00' },
+    { id: 6, title: 'Coding', date: '2024-11-02', start_time: '04:15' },
+    { id: 7, title: 'Coding', date: '2024-11-03', start_time: '05:30' },
+    { id: 8, title: 'Coding', date: '2024-11-22', start_time: '06:00' },
+    { id: 9, title: 'Coding', date: '2024-11-20', start_time: '07:45' },
+    { id: 10, title: 'Vacation', date: '2024-12-20', start_time: '08:30' },
+    { id: 11, title: 'Couriering', date: '2024-12-10', start_time: '12:15' },
+    { id: 12, title: 'Couriering', date: '2024-12-13', start_time: '10:00' },
+    { id: 13, title: 'Planning', date: '2024-12-13', start_time: '11:30' },
   ]);
 
   currentTasks = this.tasksSource.asObservable();
